@@ -54,8 +54,6 @@ This is the warning I receivied:
 
 I then created a new file called `EchoTool.cs` and pasted the following code:
 
-```sh
-
 ```csharp {filename="EchoTool.cs"}
 using System.ComponentModel;
 using ModelContextProtocol.Server;
