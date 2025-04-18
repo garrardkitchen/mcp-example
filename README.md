@@ -1,16 +1,24 @@
+This is my first effort at creating a Model Context Protocol (MCP) server in C#.  I used the reference as a guide and have documented my steps here.
 
-TO start, enter:
+# Model Context Protocol (MCP) Server in C#
+
+This is a simple example of how to create a Model Context Protocol (MCP) server in C#. The MCP server allows you to define tools that can be called from the command line or from other applications.
+
+
+To start, I entered the following command to create a new console application:
 
 ```bash
 dotnet new console -n Mcp.Echo  
 ```
 
-Now add the following dependencies to your project:
+I followed this by adding the following dependencies to my project:
 
 ```sh
 dotnet add package ModelContextProtocol --prerelease
 dotnet add package Microsoft.Extensions.Hosting
 ```
+
+I pasted the following code into my `Program.cs` file:
 
 ```csharp {filename="Program.cs"}
 using Microsoft.Extensions.DependencyInjection;
@@ -33,13 +41,20 @@ builder.Services
 await builder.Build().RunAsync();
 ```
 
-Add using:
+I had to add the follow `using` as it was missing:
+
+This is the warning I got:
+
+> ![Warning] 
+> ILoggingBuilder' does not contain a definition for 'AddConsole' and no accessible extension method 'AddConsole' accepting a first argument of type 'ILoggingBuilder' could be found (are you missing a using directive or an assembly reference?)
 
 ```csharp
 using Microsoft.Extensions.Logging;
 ```
 
-Add
+I then created a new file called `EchoTool.cs` and pasted the following code:
+
+```sh
 
 ```csharp {filename="EchoTool.cs"}
 using System.ComponentModel;
@@ -56,7 +71,7 @@ public static class EchoTool
 }
 ```
 
-Add a file `.vscode/mcp.json'
+I then added the file `.vscode/mcp.json' with this content:
 
 ```json
 {
@@ -75,26 +90,25 @@ Add a file `.vscode/mcp.json'
 }
 ```
 
-We're adding it to the .vscode folder as we don't want to share this with more globally.
+You add the server config to the .vscode folder so that it is not shared with other projects.
 
-Now build it:
+I then built it to make sure everything was working:
 
 ```bash
 dotnet build
 ```
 
-Then either (a) go to your mcp.json file and restart the server or (b) click the restart button in the bottom in the Agent view
+I then either returned to the mcp.json file and clicked the start button to start the MCP Server.  You can also do this in the Agent view:s
 
 ![](2025-04-18-14-50-06.png)
 
 The MCP server is now running.
 
-In the agent view, enter 
+Returning to the agent view, I entered the following request:
 
 ![](2025-04-18-14-47-25.png)
 
-
-I then entered:
+Reacting to what the agent was telling me, I entered:
 
 ```sh
 run #ReverseEcho Garrard
@@ -102,10 +116,10 @@ run #ReverseEcho Garrard
 
 ![](2025-04-18-14-48-14.png)
 
-And that's it, my first MCP server in C#!
+And that's it, my first MCP server in C#!  Spectacular!
 
-Yay me!
+Yay me 🤘!
 
 ## References
 
-- https://devblogs.microsoft.com/dotnet/build-a-model-context-protocol-mcp-server-in-csharp/
+- [Click here](https://devblogs.microsoft.com/dotnet/build-a-model-context-protocol-mcp-server-in-csharp/) to see the original blog post.
