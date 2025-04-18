@@ -1,0 +1,14 @@
+{
+    "inputs": [],
+    "servers": {
+        "MyFirstMCP": {
+            "type": "stdio",
+            "command": "dotnet",
+            "args": [
+                "run",
+                "--project",
+                "/Users/garrardkitchen/source/mcp/Mcp.Echo/Mcp.Echo.csproj"
+            ]
+        }
+    }
+}
