@@ -45,7 +45,7 @@ I had to add the follow `using` as it was missing:
 
 This is the warning I got:
 
-> ![Warning] 
+> [!WARNING] 
 > ILoggingBuilder' does not contain a definition for 'AddConsole' and no accessible extension method 'AddConsole' accepting a first argument of type 'ILoggingBuilder' could be found (are you missing a using directive or an assembly reference?)
 
 ```csharp
