@@ -96,13 +96,13 @@ I then built it to make sure everything was working:
 dotnet build
 ```
 
-I then either returned to the mcp.json file and clicked the start button to start the MCP Server.  You can also do this in the Agent view:s
+I then either returned to the `mcp.json` file and clicked the `Start` button above `MyFirstMCP` to start the MCP Server.  You can also do this in the Agent view:
 
 ![](2025-04-18-14-50-06.png)
 
 The MCP server is now running.
 
-Returning to the agent view, I entered the following request:
+Returning to the Agent view, I entered the following request:
 
 ![](2025-04-18-14-47-25.png)
 
