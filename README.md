@@ -4,6 +4,12 @@ This is my first effort at creating a Model Context Protocol (MCP) server in C#.
 
 This is a simple example of how to create a Model Context Protocol (MCP) server in C#. The MCP server allows you to define tools that can be called from the command line or from other applications.
 
+## Prerequisites
+
+- .NET 9.0 SDK or later
+- Visual Studio Code (recommended)
+
+---
 
 To start, I entered the following command to create a new console application:
 
@@ -117,6 +123,18 @@ run #ReverseEcho Garrard
 And that's it, my first MCP server in C#!  Spectacular!
 
 Yay me 🤘!
+
+## License
+
+```
+MIT License
+```
+
+## Troubleshooting
+
+- If you see build errors, ensure you have the correct .NET SDK installed.
+- If the MCP server does not start, check the path in your `mcp.json` and ensure all dependencies are installed.
+- For logging issues, ensure you have the correct `using Microsoft.Extensions.Logging;` directive in your `Program.cs`.
 
 ## References
 
