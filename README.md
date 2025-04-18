@@ -43,14 +43,14 @@ await builder.Build().RunAsync();
 
 I had to add the follow `using` as it was missing:
 
-This is the warning I got:
-
-> [!WARNING] 
-> ILoggingBuilder' does not contain a definition for 'AddConsole' and no accessible extension method 'AddConsole' accepting a first argument of type 'ILoggingBuilder' could be found (are you missing a using directive or an assembly reference?)
-
 ```csharp
 using Microsoft.Extensions.Logging;
 ```
+
+This is the warning I receivied:
+
+> [!WARNING] 
+> ILoggingBuilder' does not contain a definition for 'AddConsole' and no accessible extension method 'AddConsole' accepting a first argument of type 'ILoggingBuilder' could be found (are you missing a using directive or an assembly reference?)
 
 I then created a new file called `EchoTool.cs` and pasted the following code:
 
